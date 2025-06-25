@@ -1,16 +1,17 @@
 <template>
-  <div class="min-h-screen bg-gray-50 text-gray-800">
-    <header class="bg-white shadow p-4">
-      <nav class="container mx-auto flex items-center justify-between">
-        <h1 class="text-xl font-bold">
-          我的博客
-        </h1>
-        <ul class="flex space-x-4">
-          <li><RouterLink to="/" class="hover:underline">主页</RouterLink></li>
-          <li><RouterLink to="/posts" class="hover:underline">文章</RouterLink></li>
-          <li><RouterLink to="/about" class="hover:underline">关于</RouterLink></li>
-        </ul>
-      </nav>
+  <div>
+    <header>
+      <ul>
+        <h1>Away的博客</h1>
+        <div>
+          <li class="list-none">
+            <RouterLink to="/">Home</RouterLink>
+          </li>
+          <li class="list-none">
+            <RouterLink to="/about">About</RouterLink>
+          </li>
+        </div>
+      </ul>
     </header>
 
     <main class="container mx-auto py-8 px-4">
@@ -22,7 +23,7 @@
     </main>
 
     <footer class="text-center text-sm text-gray-500 py-6 border-t">
-      &copy; 2025 我的博客. All rights reserved.
+      2025 Away的博客
     </footer>
   </div>
 </template>

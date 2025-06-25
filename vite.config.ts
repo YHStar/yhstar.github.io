@@ -1,8 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
 import Markdown from 'vite-plugin-md';
 import Pages from 'vite-plugin-pages'
 
@@ -13,7 +11,6 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    vueDevTools(),
     Markdown({
        wrapperClasses: 'prose prose-sm m-auto',
     }),
