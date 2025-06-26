@@ -31,5 +31,8 @@ const router = createRouter({
     return { top: 0 };
   },
 });
-
+router.beforeEach((to, from, next) => {
+  document.title = 'Away的博客';
+  next();
+});
 export default router;

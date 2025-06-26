@@ -34,7 +34,7 @@
 .sidebar {
   flex: 1;
   height: 75vh;
-  padding: 0px;
+  padding: 20px;
   border-radius: 20px;
 }
 
