@@ -15,7 +15,7 @@
       <div class="sidebar">
         <!-- 头像部分 -->
         <div class="avatar-section">
-          <img src="/logo.jpg" alt="头像" class="avatar" />
+          <img src="/logo.png" alt="头像" class="avatar" />
         </div>
 
         <!-- 空白部分用于填充 -->
@@ -49,6 +49,12 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+* {
+  color: rgb(180, 180, 180) !important;
+}
+
+
 
 h2 {
   font-size: 40px !important;
@@ -86,15 +92,6 @@ main {
   overflow: hidden;
 }
 
-@media (max-width: 1000px) {
-  .main-container {
-    flex-direction: column-reverse;
-    /* 在小屏设备上将三列变成纵向布局 */
-    gap: 20px;
-    height: 80vh;
-  }
-}
-
 /* 自定义滚动条的整体样式 */
 .content::-webkit-scrollbar {
   width: 10px;
@@ -127,6 +124,53 @@ main {
 </style>
 
 <style scoped>
+@media (max-width: 1000px) {
+  *::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .main-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+    height: auto;
+  }
+
+  .sidebar {
+    flex: 0 !important;
+    flex-direction: row !important;
+    height: 60px !important;
+    padding: 10px !important;
+    background-color: rgba(30, 30, 30, 0.8);
+  }
+
+  .avatar-section {
+    margin: 0 !important;
+    width: 50% !important;
+    align-items: end !important;
+  }
+
+  .avatar {
+    height: 20px !important;
+  }
+
+  .spacer {
+    display: none !important;
+  }
+
+  .contact-section {
+    flex: none;
+    flex-direction: row !important;
+    gap: 50% !important;
+    margin: 0 !important;
+  }
+
+  .contact-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+
 .main-container {
   display: flex;
   height: 80vh;
@@ -155,8 +199,9 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
 .avatar-section {
-  margin-top: 70px;
+  margin-top: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -170,7 +215,8 @@ main {
 }
 
 .spacer {
-  flex-grow: 1; /* 占据中间空间，推动下方联系方式到底部 */
+  flex-grow: 1;
+  /* 占据中间空间，推动下方联系方式到底部 */
 }
 
 .contact-section {

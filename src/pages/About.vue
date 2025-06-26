@@ -12,7 +12,11 @@
 </template>
 
 <style scoped>
-
+@media (max-width: 1000px) {
+  .sidebar{
+    display: none !important;
+  }
+}
 .main-container {
   display: flex;
   height: 75vh;

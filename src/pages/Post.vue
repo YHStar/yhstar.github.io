@@ -36,6 +36,15 @@ h3 {
 }
 </style>
 <style scoped>
+@media (max-width: 1000px) {
+  .sidebar{
+    display: none !important;
+  }
+}
+router-link {
+  color: rgb(100, 100, 100);
+}
+
 .main-container {
   display: flex;
   height: 75vh;
@@ -52,10 +61,8 @@ h3 {
   height: 75vh;
   border-radius: 20px;
   background-color: rgba(45, 45, 45, 1);
-  color: rgb(180, 180, 180);
 }
 
-/* 空白区域 */
 .sidebar {
   flex: 1;
   height: 75vh;
