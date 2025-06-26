@@ -1,12 +1,24 @@
-<template>
-  <div>
-    <h1>欢迎来到首页</h1>
-    <p>这是你的博客网站首页。</p>
-  </div>
-</template>
+<script setup>
+import { listPosts } from './listPosts.js';
+const posts = listPosts();
 
-<script>
-export default {
-  name: 'Home'
-}
 </script>
+
+<template>
+  <ul class="space-y-4">
+    <li v-for="post in posts" :key="post.title" class="border-b pb-2">
+      <div class="text-sm text-gray-500 nowrap">
+        <RouterLink :to="`/posts/${post.slug}`" class="text-blue-600 hover:underline text-lg font-semibold">
+          {{ post.title }}
+        </RouterLink>
+        - {{ new Date(post.date).toLocaleDateString() }}
+      </div>
+    </li>
+  </ul>
+</template>
+<style>
+ul {
+  font-size: 24px;
+  text-align: center;
+}
+</style>

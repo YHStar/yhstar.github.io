@@ -11,7 +11,7 @@
   </header>
 
   <main class="section">
-    <dev class="container mx-auto py-8 px-4">
+    <dev class="container">
       <router-view v-slot="{ Component }">
         <component :is="Component" />
       </router-view>
@@ -41,12 +41,14 @@
   justify-content: flex-end;
   /* 将导航按钮向右对齐 */
 }
-
+h2 {
+  font-size: 40px !important;
+  text-align: center;
+}
 p {
   text-indent: 2em;
-  /* 将段落首行缩进 2 个字符宽度 */
+  font-size: 24px;
 }
-
 header {
   position: fixed;
   top: 0;
@@ -67,13 +69,14 @@ header {
 
 .left {
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .right {
   display: flex;
   gap: 10px;
 }
+
 html,
 body {
   height: 100%;
@@ -83,7 +86,20 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+main {
+  background-color: rgb(45, 45, 45);
+  margin-top: 80px;
+  /* 与 header 保持距离 */
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 70px;
+  /* 与 footer 保持距离 */
+  border-radius: 20px;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -95,4 +111,5 @@ footer {
   color: gray;
   text-align: center;
 }
+
 </style>

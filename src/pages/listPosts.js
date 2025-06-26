@@ -1,6 +1,6 @@
 import { ref, onMounted } from 'vue';
 
-export function usePosts() {
+export function listPosts() {
   const posts = ref([]);
 
   onMounted(async () => {
@@ -12,7 +12,6 @@ export function usePosts() {
         postList.map(async (item) => {
           const res = await fetch(`/posts/${item.slug}.md`);
           const content = await res.text();
-
           return {
             ...item,
             content,
