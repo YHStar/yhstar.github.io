@@ -4,6 +4,7 @@ date: 2025-06-26
 ---
 # Rare Atom sign Trash to replace somebody
 
+## 测试标题2
 MIRAA
 26-6-2025 18:31
 
@@ -29,6 +30,7 @@ China Aojie "⁠Trash⁠" Tian
 China Zhenghui "⁠z8z⁠" Liu (coach)
 China HaoWen "⁠somebody⁠" Xu (benched)
 ```
+### 测试标题1
 
 
 支持 **Markdown** 格式。
